@@ -1,0 +1,966 @@
+//TODO IDSME Remove this file after we have migrated all necessary EPO components.
+
+//@import 'mixins';
+//
+@font-face {
+	font-family: 'EPO-Icon-Font';
+	src: url('../scss/font/EPO-Icon-Font.eot?r8txb2');
+	src:
+	url('../scss/font/EPO-Icon-Font.eot?r8txb2#iefix') format('embedded-opentype'),
+	url('../scss/font/EPO-Icon-Font.ttf?r8txb2') format('truetype'),
+	url('../scss/font/EPO-Icon-Font.woff?r8txb2') format('woff'),
+	url('../scss/font/EPO-Icon-Font.svg?r8txb2#EPO-Icon-Font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//.epoIcon {
+//  /* use !important to prevent issues with browser extensions that change fonts */
+//  font-family: 'EPO-Icon-Font' !important;
+//  speak: none;
+//  font-style: normal;
+//  font-weight: normal;
+//  font-variant: normal;
+//  text-transform: none;
+//  line-height: 1;
+//
+//  /* Enable Ligatures ================ */
+//  letter-spacing: 0;
+//  -webkit-font-feature-settings: "liga";
+//  -moz-font-feature-settings: "liga=1";
+//  -moz-font-feature-settings: "liga";
+//  -ms-font-feature-settings: "liga" 1;
+//  font-feature-settings: "liga";
+//  -webkit-font-variant-ligatures: discretionary-ligatures;
+//  font-variant-ligatures: discretionary-ligatures;
+//
+//  /* Better Font Rendering =========== */
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//}
+//
+//.epoIcon-Modules {
+//	&:before {
+//		content: '\f00a';
+//	}
+//}
+//
+////
+//// Variables
+//// --------------------------------------------------
+//
+////== Colors
+////
+$epo-primary-color-1: #2a323d;
+$epo-primary-color-2: #3e4954;
+$epo-primary-color-3: #536274;
+$epo-primary-color-4: #7d89a5;
+
+$epo-primary-color-5: #000000;
+$epo-primary-color-6: #484747;
+$epo-primary-color-7: #71767d;
+$epo-primary-color-8: #919192;
+
+
+//== States
+//
+//## Component states.
+//$epo-bg-color: #ffffff;
+//$epo-bg-selected-color: $epo-primary-color-4;
+//$epo-bg-focused-color: lighten($epo-primary-color-4, 40%);
+//$epo-bg-hover-color: #e4ecef;
+//$epo-bg-disabled-color: #e0e0e0;
+//
+//$epo-border-color: #e1e1e1;
+//$epo-border-selected-color: #4a4a4a;
+//$epo-border-focused-color: #fcbe29;
+//$epo-border-hover-color: darken($epo-border-color, 30%);
+//$epo-border-disabled-color: $epo-border-color;
+//
+//$epo-border-focused-size: .3rem;
+//
+//$epo-success:         #5cb85c;
+//$epo-info:            #5bc0de;
+//$epo-warning:         #f0ad4e;
+//$epo-danger:          #d9534f;
+//
+//
+////== Scaffolding
+////
+////## Settings for some of the most global styles.
+//
+////** Global text color on `<body>`.
+//$epo-text-color:            #333;
+//
+//$epo-text-highlight-color:   #ffffff;
+//$epo-text-selected-color:   #ffffff;
+//$epo-text-focused-color:   $epo-primary-color-5;
+//$epo-text-placeholder-color: #767676; // https://www.w3.org/WAI/tutorials/forms/instructions/#styling
+//
+////** Global textual link color.
+//$epo-link-color:            $epo-primary-color-3;
+////** Link hover color set via `darken()` function.
+//$epo-link-hover-color:      $epo-primary-color-4;
+////** Link hover decoration.
+//$epo-link-hover-decoration: underline;
+//
+//
+////== Typography
+////
+////## Font, line-height, and color for body text and more.
+//
+////$epo-font-family-sans-serif:  "Source Sans Pro", sans-serif;
+////$font-family-regular:        $epo-font-family-sans-serif;
+//
+//$epo-calc-font-size:          10;
+//$epo-font-size-base:          font-size(16);
+//$epo-font-size-large:         font-size(20);
+//$epo-font-size-small:         font-size(14);
+//
+//$calc-for-edfs: 18/14; // To simplify and align calculations with Edfs.
+//
+////** Unit-less `line-height` for use in components like buttons.
+//$epo-line-height-base:        1.42857; // 20/14
+//
+//
+////== Alert
+////
+//
+//$epo-alert-border-width: 1px;
+//$epo-alert-border-radius: .2rem;
+//$epo-alert-padding: 15px;
+//$epo-alert-margin: 10px 5px;
+//$epo-alert-font-size: $epo-font-size-base;
+//
+//$epo-alert-success-bg: #dff0d8;
+//$epo-alert-success-text-color: #3c763d;
+//$epo-alert-success-link-color: #3c763d;
+//$epo-alert-success-border-color: #d6e9c6;
+//
+//$epo-alert-info-bg: #d9edf7;
+//$epo-alert-info-text-color: #31708f;
+//$epo-alert-info-link-color: #31708f;
+//$epo-alert-info-border-color: #bce8f1;
+//
+//$epo-alert-warning-bg: #fcf8e3;
+//$epo-alert-warning-text-color: #8a6d3b;
+//$epo-alert-warning-link-color: #8a6d3b;
+//$epo-alert-warning-border-color: #faebcc;
+//
+//$epo-alert-danger-bg: #f2dede;
+//$epo-alert-danger-text-color: #a94442;
+//$epo-alert-danger-link-color: #a94442;
+//$epo-alert-danger-border-color: #ebccd1;
+//
+//
+////== Badge
+////
+//
+//$epo-badge-color:           #fff;
+//$epo-badge-font-size:       font-size(14);
+//$epo-badge-font-weight:     normal;
+//$epo-badge-line-height:     1;
+//$epo-badge-border-radius:   4px;
+//$epo-badge-padding:         3px 6px;
+//$epo-badge-min-width:       20px;
+//$epo-badge-min-height:      20px;
+//
+//$epo-badge-default:         $epo-primary-color-6;
+//$epo-badge-simple:          $epo-text-color;
+//$epo-badge-primary:         $epo-primary-color-4;
+//$epo-badge-success:         #5cb85c;
+//$epo-badge-info:            #5bc0de;
+//$epo-badge-warning:         #f0ad4e;
+//$epo-badge-danger:          #c73105;
+//
+//$epo-badge-invert:          #fff;
+//$epo-badge-invert-color:    $epo-text-color;
+//
+//
+////== Button
+////
+//
+//$btn-primary-box-shadow-color: #0b58ab;
+//$btn-primary-disabled-box-shadow-color: #9aa2ab;
+//$btn-secondary-box-shadow-color: desaturate($btn-primary-box-shadow-color, 100%);
+//$btn-danger-box-shadow-color: #6c0c0f;
+//
+//$epo-btn-font-family: $font-family-regular;
+//$epo-btn-font-size: font-size(18);
+//$epo-btn-font-weight: normal;
+//$epo-btn-line-height: $epo-line-height-base;
+//$epo-btn-focus-border-color: $epo-border-focused-color;
+//
+//$epo-btn-primary-text: white;
+//$epo-btn-primary-bg: #346caa;
+//$epo-btn-primary-hover-bg: #1a73cf;
+//$epo-btn-primary-active-bg: #1d5490;
+//$epo-btn-primary-focus-bg: $epo-btn-primary-bg;
+//$epo-btn-primary-box-shadow: 0 .1rem 0 0 $btn-primary-box-shadow-color;
+//$epo-btn-primary-disabled-text: #fff;
+//$epo-btn-primary-disabled-bg: #9ab5d4;
+//$epo-btn-primary-disabled-box-shadow: 0 .1rem 0 0 $btn-primary-disabled-box-shadow-color;
+//$epo-btn-primary-readonly-text: $epo-btn-primary-disabled-text;
+//$epo-btn-primary-readonly-bg: $epo-btn-primary-disabled-bg;
+//$epo-btn-primary-readonly-box-shadow: $epo-btn-primary-disabled-box-shadow;
+//
+//$epo-btn-secondary-text: white;
+//$epo-btn-secondary-bg: #565656;
+//$epo-btn-secondary-hover-bg: #6b6b6b;
+//$epo-btn-secondary-active-bg: #383838;
+//$epo-btn-secondary-focus-bg: $epo-btn-secondary-bg;
+//$epo-btn-secondary-box-shadow: 0 .1rem 0 0 $btn-secondary-box-shadow-color;
+//$epo-btn-secondary-disabled-text: #fff;
+//$epo-btn-secondary-disabled-bg: #a5a5a5;
+//$epo-btn-secondary-disabled-box-shadow: 0 .1rem 0 0 lighten(desaturate($btn-primary-disabled-box-shadow-color, 100%), 10%);
+//$epo-btn-secondary-readonly-text: $epo-btn-secondary-disabled-text;
+//$epo-btn-secondary-readonly-bg: $epo-btn-secondary-disabled-bg;
+//$epo-btn-secondary-readonly-box-shadow: $epo-btn-secondary-disabled-box-shadow;
+//
+//$epo-btn-danger-text: white;
+//$epo-btn-danger-bg: #cd332f;
+//$epo-btn-danger-hover-bg: #dd2922;
+//$epo-btn-danger-active-bg: #a42926;
+//$epo-btn-danger-focus-bg: $epo-btn-danger-bg;
+//$epo-btn-danger-box-shadow: 0 .1rem 0 0 $btn-danger-box-shadow-color;
+//$epo-btn-danger-disabled-text: #fff;
+//$epo-btn-danger-disabled-bg: lighten(desaturate($epo-btn-danger-bg, 30%), 30%);
+//$epo-btn-danger-disabled-box-shadow: 0 .1rem 0 0 lighten(desaturate($btn-danger-box-shadow-color, 40%), 40%);
+//$epo-btn-danger-readonly-text: $epo-btn-danger-disabled-text;
+//$epo-btn-danger-readonly-bg: $epo-btn-danger-disabled-bg;
+//$epo-btn-danger-readonly-box-shadow: $epo-btn-danger-disabled-box-shadow;
+//
+//$epo-btn-link-text: #376CA1;
+//$epo-btn-link-hover: #376CA1;
+//$epo-btn-link-active: #376CA1;
+//$epo-btn-link-visited: #6ea2d7;
+//$epo-btn-link-disabled: #9BB5D0;
+//$epo-btn-link-readonly: $epo-btn-link-disabled;
+//$epo-btn-link-box-shadow: none;
+//
+//$epo-btn-border-width: .1rem .1rem 0 .1rem;
+//$epo-btn-border-radius: font-size(3 * $calc-for-edfs);
+//$epo-btn-border-radius-large: font-size(3 * $calc-for-edfs);
+//$epo-btn-border-radius-small: font-size(2 * $calc-for-edfs);
+//
+//$epo-btn-icon-width: font-size(34); // square button
+//
+//$epo-btn-margin: 0;
+//$epo-btn-min-width: font-size(30);
+//
+//$epo-btn-height: font-size(26 * $calc-for-edfs) - font-size(6);
+//$epo-btn-calculated-height: font-size(26 * $calc-for-edfs) + 0.1rem; // + ~1px for the box-shadow
+//$epo-btn-padding-base-vertical: font-size(3);
+//$epo-btn-padding-base-horizontal: font-size(16);
+//
+//$epo-btn-large-height: font-size(32);
+//$epo-btn-padding-large-vertical: font-size(4);
+//$epo-btn-padding-large-horizontal: font-size(18);
+//
+//$epo-btn-small-height: font-size(22);
+//$epo-btn-padding-small-vertical: font-size(2);
+//$epo-btn-padding-small-horizontal: font-size(12);
+//
+//$epo-btn-xs-height: font-size(18);
+//$epo-btn-padding-xs-vertical: font-size(1);
+//$epo-btn-padding-xs-horizontal: font-size(10);
+//
+//
+////== Button dropdown
+////
+//
+//$epo-button-dropdown-icon-font-size: font-size(19);
+//
+//$epo-button-dropdown-toggle-width: font-size(30);
+//$epo-button-dropdown-toggle-height: $epo-btn-calculated-height;
+//$epo-button-dropdown-line-offset: font-size(37);
+//
+//$epo-button-dropdown-single-arrow-width: font-size(18);
+//$epo-button-dropdown-single-arrow-top: font-size(1);
+//$epo-button-dropdown-single-arrow-left: font-size(4);
+//
+//$epo-button-dropdown-list-top: $epo-btn-calculated-height;
+//$epo-button-dropdown-max-height: font-size(200);
+//$epo-button-dropdown-z-index: 1;
+//
+//
+////== Checkbox
+////
+//
+//$epo-checkbox-font-size: font-size(18);
+//$epo-checkbox-margin: .3rem .7rem 0 0;
+//$epo-checkbox-margin-horizontal: .3rem 2rem 0 0;
+//$epo-checkbox-label-font-weight: normal;
+//$epo-checkbox-label-margin: 0 0 .9rem 0;
+//$epo-checkbox-width: font-size(16);
+//$epo-checkbox-height: font-size(16);
+//
+//
+////== Radio button
+////
+//
+//$epo-radio-font-size: font-size(18);
+//$epo-radio-margin: .3rem .8rem 0 0;
+//$epo-radio-label-font-weight: normal;
+//$epo-radio-label-margin: 0 0 .4rem 0;
+//
+//
+////== Content box
+////
+//
+//$contentbox-header-bottom-border-color: #ddd;
+//
+//$epo-contentbox-bg: #fff;
+//$epo-contentbox-margin: 0 0 10px 0;
+//$epo-contentbox-padding: 10px;
+//$epo-contentbox-border-width: 1px;
+//$epo-contentbox-border-color: #979797;
+//$epo-contentbox-border-radius: 3px;
+//
+//$epo-contentbox-header-bg: #f5f5f5;
+//$epo-contentbox-header-font-size: font-size(18);
+//$epo-contentbox-header-line-height: font-size(18);
+//$epo-contentbox-header-padding: 10px 8px;
+//$epo-contentbox-header-focus-bg: darken($epo-contentbox-header-bg, 7%);
+//$epo-contentbox-header-focus-border-width: 0;
+//$epo-contentbox-header-focus-border-color: transparent;
+//$epo-contentbox-header-z-index: 101;
+//
+//$epo-contentbox-hint-color: $epo-primary-color-8;
+//$epo-contentbox-hint-font-size: 70%;
+//$epo-contentbox-header-font-weight: 700;
+//
+//$epo-contentbox-icon-color: #535353;
+//$epo-contentbox-icon-margin: 1px 11px 0 0;
+//
+//
+////== Data table
+////
+//
+//$epo-datatable-font-size: font-size(18);
+//$epo-datatable-border-width: .1rem;
+//$epo-datatable-border-color: #979797;
+//
+//$epo-datatable-td-bg: #fff;
+//$epo-datatable-td-odd-bg: #fbfbfb;
+//$epo-datatable-td-selected-bg: #f2f2f2;
+//$epo-datatable-td-focus-bg: #f2f2f2;
+//$epo-datatable-td-hover-bg: #f2f2f2;
+//$epo-datatable-td-color: #000;
+//$epo-datatable-td-font-size: font-size(18);
+//$epo-datatable-td-font-weight: normal;
+//$epo-datatable-td-padding: 1rem;
+//$epo-datatable-td-border-width: 0;
+//$epo-datatable-td-border-color: transparent;
+//
+//$epo-datatable-th-bg: #f5f5f5;
+//$epo-datatable-th-hover-bg: #e7e7e7;
+//$epo-datatable-th-selected-bg: #d6d6d6;
+//$epo-datatable-th-selected-hover-bg: darken(#d6d6d6, 5%);
+//$epo-datatable-th-color: #000;
+//$epo-datatable-th-font-size: font-size(18);
+//$epo-datatable-th-font-weight: 700;
+//$epo-datatable-th-padding: 1rem;
+//$epo-datatable-th-border-width: 0;
+//$epo-datatable-th-border-color: transparent;
+//
+//$epo-datatable-icon-color: #999;
+//$epo-datatable-icon-active-color: #000;
+//$epo-datatable-icon-margin: 0 0 0 .4rem;
+//
+//$epo-datatable-filter-padding: .4rem .2rem;
+//
+//
+////== Date picker
+////
+//
+//$epo-datepicker-font-size: $epo-font-size-base;
+//$epo-datepicker-bg: #fff;
+//$epo-datepicker-padding: 10px;
+//$epo-datepicker-border-width: 1px;
+//$epo-datepicker-border-color: #c7cbcf;
+//$epo-datepicker-border-radius: 0;
+//$epo-datepicker-top: 38px;
+//$epo-datepicker-left: 0;
+//$epo-datepicker-width: 300px;
+//$epo-datepicker-title-width: 200px;
+//$epo-datepicker-z-index: 10;
+//
+//$epo-datepicker-button-color: $epo-text-color;
+//$epo-datepicker-button-hover-color: #000;
+//$epo-datepicker-button-line-height: font-size(26.1);
+//$epo-datepicker-button-top: 1px;
+//$epo-datepicker-button-right: 1px;
+//$epo-datepicker-button-width: 30px;
+//
+//$epo-datepicker-calendar-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, .17);
+//
+//$epo-datepicker-nav-hover-color: lighten(lighten(#3a3a3a, 2.75%), 25%);
+//
+//$epo-datepicker-cell-border-width: 2px;
+//$epo-datepicker-cell-selected-bg: #fff;
+//$epo-datepicker-cell-selected-color: $epo-text-color;
+//$epo-datepicker-cell-selected-border-color: #427ab3;
+//$epo-datepicker-cell-today-bg: #427ab3;
+//$epo-datepicker-cell-today-color: #fff;
+//$epo-datepicker-cell-today-border-color: #427ab3;
+//$epo-datepicker-cell-disabled-color: lighten(lighten(#3a3a3a, 2.75%), 35%);
+//$epo-datepicker-cell-padding: 5px;
+//$epo-datepicker-cell-hover-bg: #ddd;
+//$epo-datepicker-cell-hover-color: $epo-text-color;
+//$epo-datepicker-cell-hover-border-color: #ddd;
+//
+//$epo-datepicker-day-width: 28px;
+//$epo-datepicker-day-height: 28px;
+//$epo-datepicker-day-line-height: font-size(26);
+//
+//
+////== Dialog
+////
+//
+//$epo-dialog-bg: #efefef;
+//$epo-dialog-padding: font-size(10) font-size(20) font-size(20);
+//$epo-dialog-border-width: font-size(1);
+//$epo-dialog-border-color: #3b3b3b;
+//$epo-dialog-border-radius: font-size(3);
+//$epo-dialog-box-shadow: none;
+//$epo-dialog-min-height: font-size(200);
+//$epo-dialog-min-width: font-size(200);
+//$epo-dialog-top: 15%;
+//
+//$epo-dialog-title-color: #7e7e7e;
+//$epo-dialog-title-font-size: font-size(22);
+//$epo-dialog-title-font-weight: 600;
+//$epo-dialog-title-line-height: font-size(25);
+//$epo-dialog-title-padding: font-size(15) font-size(20) font-size(10);
+//
+//$epo-dialog-close-icon-color: #999;
+//$epo-dialog-close-icon-font-size: font-size(9);
+//$epo-dialog-close-icon-width: font-size(20);
+//$epo-dialog-close-icon-height: font-size(20);
+//$epo-dialog-close-icon-top: font-size(10);
+//$epo-dialog-close-icon-right: font-size(10);
+//
+//$epo-dialog-overlay-bg: rgba(0, 0, 0, 0.6);
+//
+//// Dialog notification
+//
+//$epo-dialog-notification-bg: #fff;
+//$epo-dialog-notification-color: #333;
+//$epo-dialog-notification-padding: font-size(14) font-size(14) font-size(17) font-size(77);
+//$epo-dialog-notification-border-width: font-size(3) font-size(3) font-size(3) font-size(10);
+//$epo-dialog-notification-border-radius: font-size(3);
+//$epo-dialog-notification-box-shadow: 0 font-size(2) font-size(4) 0 rgba(0, 0, 0, 0.5);
+//$epo-dialog-notification-border-color-success: #5cb85c;
+//$epo-dialog-notification-border-color-error: #ca2d29;
+//$epo-dialog-notification-border-color-info: #2f96b4;
+//$epo-dialog-notification-border-color-warning: #f89406;
+//
+//$epo-dialog-notification-title-color: #333;
+//$epo-dialog-notification-title-font-size: font-size(20);
+//$epo-dialog-notification-title-font-weight: bold;
+//$epo-dialog-notification-title-line-height: font-size(26);
+//$epo-dialog-notification-title-margin: font-size(20) 0 0 0;
+//$epo-dialog-notification-title-padding: 0;
+//
+//$epo-dialog-notification-message-color: #333;
+//$epo-dialog-notification-message-font-size: font-size(20);
+//$epo-dialog-notification-message-line-height: font-size(26);
+//$epo-dialog-notification-message-margin: font-size(10) 0 0 0;
+//$epo-dialog-notification-message-padding: 0;
+//
+//$epo-dialog-notification-icon-font-size: font-size(40);
+//$epo-dialog-notification-icon-width: font-size(35);
+//$epo-dialog-notification-icon-height: font-size(35);
+//$epo-dialog-notification-icon-top: font-size(27);
+//$epo-dialog-notification-icon-left: font-size(30);
+//$epo-dialog-notification-icon-color-success: #41a93f;
+//$epo-dialog-notification-icon-color-error: #ca2d29;
+//$epo-dialog-notification-icon-color-info: #2f96b4;
+//$epo-dialog-notification-icon-color-warning: #f89406;
+//
+//
+////== Dossier badge
+////
+//
+//$epo-dossierbadge-phase-s-color: #0076d1;
+//$epo-dossierbadge-phase-e-color: #0076d1;
+//$epo-dossierbadge-phase-o-color: #0db20d;
+//$epo-dossierbadge-phase-a-color: #df0808;
+//$epo-dossierbadge-phase-l-color: #6e5231;
+//
+//$epo-dossierbadge-type-ep-bg: #c7e6fb;
+//$epo-dossierbadge-type-ep-border-color: #a1d5f7;
+//$epo-dossierbadge-type-ro-bg: #efece3;
+//$epo-dossierbadge-type-ro-border-color: #e3dfcf;
+//$epo-dossierbadge-type-pct-bg: #f7d56d;
+//$epo-dossierbadge-type-pct-border-color: #f1b80c;
+//$epo-dossierbadge-type-bo-bg: #c7e6fb;
+//$epo-dossierbadge-type-bo-border-color: #0076d1;
+//$epo-dossierbadge-type-co-bg: #ebebeb;
+//$epo-dossierbadge-type-co-border-color: #dddddd;
+//$epo-dossierbadge-type-fa-bg: #c7e6fb;
+//$epo-dossierbadge-type-fa-border-color: #a1d5f7;
+//$epo-dossierbadge-type-go-bg: #f9f08b;
+//$epo-dossierbadge-type-go-border-color: #f5e63d;
+//$epo-dossierbadge-type-io-bg: #d2c6b7;
+//$epo-dossierbadge-type-io-border-color: #b49f87;
+//$epo-dossierbadge-type-lo-bg: #fff;
+//$epo-dossierbadge-type-lo-border-color: #000;
+//$epo-dossierbadge-type-no-bg: #f6a776;
+//$epo-dossierbadge-type-no-border-color: #f06c1a;
+//$epo-dossierbadge-type-mo-bg: #c5baad;
+//$epo-dossierbadge-type-mo-border-color: #6e5231;
+//$epo-dossierbadge-type-sn-bg: #6ed16e;
+//$epo-dossierbadge-type-sn-border-color: #0db20d;
+//$epo-dossierbadge-type-fs-bg: #c7e6fb;
+//$epo-dossierbadge-type-fs-border-color: #a1d5f7;
+//$epo-dossierbadge-type-fs-border-left-width: 0.3rem;
+//$epo-dossierbadge-type-fs-border-left-color: #df0808;
+//$epo-dossierbadge-type-to-bg: #ffffff;
+//$epo-dossierbadge-type-to-border-color: #df0808;
+//$epo-dossierbadge-type-lt-bg: #ffffff;
+//$epo-dossierbadge-type-lt-border-color: #006a44;
+//
+//$epo-dossierbadge-whitetext: #ffffff;
+//
+//
+////== Dropdown
+////
+//
+//$epo-dropdown-bg: #fff;
+//$epo-dropdown-disabled-bg: #f7f7f7;
+//$epo-dropdown-disabled-color: #b6b6b6;
+//$epo-dropdown-disabled-opacity: 0.5;
+//$epo-dropdown-height: font-size(28);
+//
+//$epo-dropdown-color: #333;
+//$epo-dropdown-font-size: font-size(18);
+//$epo-dropdown-border-width: font-size(1);
+//$epo-dropdown-border-color: #c7cbcf;
+//$epo-dropdown-border-focus-color: $epo-border-focused-color;
+//$epo-dropdown-border-radius: font-size(2);
+//$epo-dropdown-line-height: $epo-line-height-base;
+//$epo-dropdown-padding: font-size(2) font-size(8);
+//$epo-dropdown-placeholder-color: $epo-text-placeholder-color;
+//
+//$epo-dropdown-list-border-width: font-size(1);
+//$epo-dropdown-list-border-color: #ccc;
+//$epo-dropdown-list-margin: font-size(-1) 0 0;
+//$epo-dropdown-list-padding: 0;
+//$epo-dropdown-list-item-bg: #fff;
+//$epo-dropdown-list-item-disabled-bg: #fff;
+//$epo-dropdown-list-item-selected-bg: #ddd;
+//$epo-dropdown-list-item-hover-bg: #f5f5f5;
+//$epo-dropdown-list-item-color: $epo-dropdown-color;
+//$epo-dropdown-list-item-disabled-color: #9e9e9e;
+//$epo-dropdown-list-item-selected-color: $epo-dropdown-color;
+//$epo-dropdown-list-item-hover-color: $epo-dropdown-color;
+//$epo-dropdown-list-item-padding: font-size(4) font-size(8);
+//
+//$epo-dropdown-list-filter-padding: font-size(3);
+//$epo-dropdown-list-filter-input-padding: font-size(4);
+//
+//$epo-dropdown-tag-bg: #fff;
+//$epo-dropdown-tag-color: #333;
+//$epo-dropdown-tag-border-width: font-size(1);
+//$epo-dropdown-tag-border-color: #aaa;
+//$epo-dropdown-tag-border-focus-color: $epo-border-focused-color;
+//$epo-dropdown-tag-border-radius: font-size(3);
+//$epo-dropdown-tag-margin: font-size(2) font-size(5) font-size(2) 0;
+//$epo-dropdown-tag-padding: 0 font-size(4);
+//$epo-dropdown-tag-icon-color: #aaa;
+//$epo-dropdown-tag-icon-hover-color: #555;
+//$epo-dropdown-tag-container-padding: 0 font-size(5);
+//
+//$epo-dropdown-toggle-icon-bg: #e7e7e7;
+//$epo-dropdown-toggle-icon-hover-bg: #ababab;
+//$epo-dropdown-toggle-icon-color: #535353;
+//$epo-dropdown-toggle-icon-font-size: font-size(18);
+//$epo-dropdown-toggle-width: font-size(27);
+//
+//$epo-dropdown-clear-icon-font-size: font-size(18);
+//$epo-dropdown-input-status-right: font-size(35);
+//
+//
+////== Form inputs
+////
+//// Text field, Textarea & dropdown
+//
+//$epo-input-bg: #fff;
+//$epo-input-bg-disabled: #f7f7f7;
+//$epo-input-color: $epo-text-color;
+//$epo-input-border-width: font-size(1);
+//$epo-input-border-color: #c7cbcf;
+//$epo-input-border-focus: $epo-border-focused-color;
+//$epo-input-border-radius: font-size(3);
+//$epo-input-padding: font-size(2) font-size(8);
+//
+//$epo-input-label-color: $epo-text-color;
+//$epo-input-label-font-weight: bold;
+//$epo-input-label-font-size: font-size(18);
+//$epo-input-label-margin: 0;
+//$epo-input-label-padding: 0;
+//$epo-input-label-min-height: font-size(24);
+//$epo-input-label-optional-color: $epo-primary-color-8;
+//$epo-input-label-required-color: $epo-text-color;
+//
+//$epo-input-font-size: font-size(18);
+//$epo-input-font-family: $font-family-regular;
+//$epo-input-line-height: $epo-line-height-base;
+//
+//$epo-input-font-size-small: $epo-font-size-small;
+//$epo-input-font-size-large: $epo-font-size-large;
+//
+//$epo-input-line-height-small: font-size(18);
+//$epo-input-line-height-large: font-size(24);
+//
+//$epo-input-color-placeholder: $epo-primary-color-8;
+//$epo-input-height: font-size(28);
+//
+//$epo-input-border-radius-small: font-size(2);
+//$epo-input-border-radius-large: font-size(4);
+//
+//$epo-textarea-padding: font-size(6) font-size(9);
+//
+//
+//$epo-input-container-padding: 0 0 font-size(20) 0;
+//$epo-horizontal-form-group-gutter: font-size(20);
+//$epo-horizontal-form-group-label: 15rem;
+//$epo-horizontal-form-group-label-padding: font-size(3) 0 0 0;
+//
+//// Validation
+//$epo-input-success-color: #4eb14d;
+//$epo-input-error-color: #ce3634;
+//
+//$epo-input-status-width: font-size(20);
+//$epo-input-status-height: font-size(20);
+//$epo-input-status-right: font-size(2);
+//$epo-input-status-top: calc(50% - .6rem);
+//$epo-input-status-valid-right: font-size(2);
+//$epo-input-status-textarea-top: font-size(9);
+//
+//
+////== Inline edit
+////
+//
+//$epo-inline-edit-font-size: font-size(14);
+//
+//
+////== Label
+////
+//
+//$epo-label-color:           #fff;
+//$epo-label-font-size:       75%;
+//$epo-label-font-weight:     700;
+//$epo-label-line-height:     1;
+//$epo-label-border-radius:   .25em;
+//$epo-label-padding:         .2em .6em .3em;
+//
+//$epo-label-default:         $epo-primary-color-6;
+//$epo-label-primary:         $epo-primary-color-4;
+//$epo-label-success:         $epo-success;
+//$epo-label-info:            $epo-info;
+//$epo-label-warning:         $epo-warning;
+//$epo-label-danger:          $epo-danger;
+//
+//
+////== Notification
+////
+//
+//$epo-notification-bg: #fff;
+//$epo-notification-color: #333;
+//$epo-notification-margin: font-size(10) 0 0;
+//$epo-notification-padding: font-size(14) font-size(14) font-size(17) font-size(56);
+//$epo-notification-border-width: font-size(3) font-size(3) font-size(3) font-size(10);
+//$epo-notification-border-radius: font-size(3);
+//$epo-notification-box-shadow: 0 font-size(2) font-size(4) 0 rgba(0, 0, 0, 0.5);
+//$epo-notification-width: font-size(626);
+//$epo-notification-min-height: font-size(100);
+//$epo-notification-z-index: 1050;
+//$epo-notification-right: font-size(25);
+//$epo-notification-bottom: font-size(32);
+//$epo-notification-border-color-success: #5cb85c;
+//$epo-notification-border-color-error: #ca2d29;
+//$epo-notification-border-color-info: #2f96b4;
+//$epo-notification-border-color-warning: #f89406;
+//
+//$epo-notification-title-color: #333;
+//$epo-notification-title-font-size: font-size(20);
+//$epo-notification-title-font-weight: bold;
+//$epo-notification-title-line-height: font-size(26);
+//$epo-notification-title-margin: font-size(4) 0 0 0;
+//$epo-notification-title-padding: 0;
+//
+//$epo-notification-message-color: #333;
+//$epo-notification-message-font-size: font-size(16);
+//$epo-notification-message-margin: font-size(10) 0 0 0;
+//$epo-notification-message-padding: 0;
+//
+//$epo-notification-icon-font-size: font-size(30);
+//$epo-notification-icon-width: font-size(30);
+//$epo-notification-icon-height: font-size(30);
+//$epo-notification-icon-top: font-size(16);
+//$epo-notification-icon-left: font-size(20);
+//$epo-notification-icon-color-success: #41a93f;
+//$epo-notification-icon-color-error: #ca2d29;
+//$epo-notification-icon-color-info: #2f96b4;
+//$epo-notification-icon-color-warning: #f89406;
+//
+//$epo-notification-close-icon-color: #999;
+//$epo-notification-close-icon-font-size: font-size(20);
+//$epo-notification-close-icon-width: font-size(20);
+//$epo-notification-close-icon-height: font-size(20);
+//$epo-notification-close-icon-top: font-size(17);
+//$epo-notification-close-icon-right: font-size(16);
+//
+//
+////== Picture
+////
+//
+//$epo-picture-border-style: solid;
+//$epo-picture-border-color: #b2b2b2;
+//$epo-picture-thumbnail-border-width: 1px;
+//$epo-picture-thumbnail-z-index: 80;
+//$epo-picture-full-border-width: 4px;
+//$epo-picture-full-z-index: 90;
+//$epo-picture-full-left: calc( 100% + 0.3rem );
+//$epo-picture-full-top: calc( 50% - 0.4rem );
+//
+//
+////== Popup
+////
+//
+//$epo-popup-bg: #fff;
+//$epo-popup-min-width: 5rem;
+//$epo-popup-min-height: 5rem;
+//$epo-popup-z-index: 1029;
+//
+//
+////== Snippet
+////
+//
+//$epo-snippet-font-size: $epo-font-size-base;
+//$epo-snippet-min-height: font-size(40);
+//$epo-snippet-margin: 0;
+//$epo-snippet-padding: 0;
+//
+//$epo-snippet-item-color: $epo-text-color;
+//
+//$epo-snippet-item-border-width: font-size(1);
+//$epo-snippet-item-border-color: #718690;
+//$epo-snippet-item-hover-border-color: $epo-snippet-item-border-color;
+//$epo-snippet-item-selected-border-color: $epo-snippet-item-border-color;
+//
+//$epo-snippet-item-bg: #fff;
+//$epo-snippet-item-hover-bg: #f2f2f2;
+//$epo-snippet-item-focus-bg: $epo-snippet-item-hover-bg;
+//$epo-snippet-item-selected-bg: #dedede;
+//$epo-snippet-item-selected-hover-bg: #d8d8d8;
+//$epo-snippet-item-padding: 0;
+//$epo-snippet-item-padding-with-class: font-size(15);
+//
+//$epo-snippet-item-checkbox-top: font-size(19);
+//$epo-snippet-item-checkbox-left: font-size(21);
+//$epo-snippet-item-checkbox-width: font-size(16);
+//$epo-snippet-item-checkbox-height: font-size(16);
+//
+//$epo-snippet-item-with-checkbox-margin: font-size(10) 0 font-size(10) font-size(58);
+//$epo-snippet-item-with-checkbox-padding: 0 font-size(20);
+//$epo-snippet-item-width-checkbox-margin-difference: font-size(58);
+//
+//$epo-snippet-item-with-checkbox-border-width: 0 0 0 font-size(1);
+//$epo-snippet-item-with-checkbox-border-color: #ddd;
+//$epo-snippet-item-with-checkbox-hover-border-color: #fff;
+//
+//$epo-snippet-link-color: #333;
+//$epo-snippet-link-hover-color: #000;
+//$epo-snippet-link-active-color: $epo-snippet-link-hover-color;
+//$epo-snippet-link-visited-color: $epo-snippet-link-color;
+//
+//$epo-snippet-link-decoration: underline;
+//$epo-snippet-link-hover-decoration: underline;
+//
+//$epo-snippet-blocked-bg-color: rgba(255, 255, 255, 0.7);
+//$epo-snippet-blocked-border-color: #f7002f;
+//$epo-snippet-blocked-border-width: 0.1rem 0.1rem 0.1rem 0.6rem;
+//
+//$epo-snippet-blocked-text-color: #e52329;
+//$epo-snippet-blocked-text-font-size: 4rem;
+//$epo-snippet-blocked-text-font-weight: bold;
+//$epo-snippet-blocked-text-text-align: center;
+//$epo-snippet-blocked-text-rotation: rotate(-15deg);
+//
+//$epo-snippet-blocked-lock-bg: #f7002f;
+//$epo-snippet-blocked-lock-width: 3.7rem;
+//$epo-snippet-blocked-lock-height: 2.7rem;
+//$epo-snippet-blocked-lock-font-size: 2.2rem;
+//$epo-snippet-blocked-lock-text-align: center;
+//$epo-snippet-blocked-lock-color: #fff;
+//$epo-snippet-blocked-lock-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+//$epo-snippet-blocked-lock-border-radius: 0 0.9rem 0.9rem 0;
+//
+//
+////== Tabs
+////
+//
+//$epo-tabs-font-size: font-size(18);
+//$epo-tabs-border-width: font-size(1) 0;
+//$epo-tabs-border-radius: 0;
+//
+//$epo-tabs-bg: #ebebeb;
+//$epo-tabs-border-color: #ddd;
+//
+//
+//$epo-tab-bg: #ebebeb;
+//$epo-tab-border-color: #dddddd;
+//$epo-tab-label: #666;
+//
+//$epo-tab-hover-bg: #e2e2e2;
+//$epo-tab-hover-border-color: #c7cbcf;
+//$epo-tab-hover-label: #666666;
+//
+//$epo-tab-clicked-bg: #d0d0d0;
+//$epo-tab-clicked-border-color: $epo-tab-hover-border-color;
+//$epo-tab-clicked-label: $epo-tab-hover-label;
+//
+///* selected is now active to align to styleguide naming */
+//$epo-tab-active-bg: #ffffff;
+//$epo-tab-active-border-color: $epo-tab-border-color;
+//$epo-tab-active-label: $epo-tab-hover-label;
+//$epo-tab-active-indicator-color: #0084d5;
+//
+//$epo-tab-disabled-bg: $epo-tab-bg;
+//$epo-tab-disabled-border-color: $epo-tab-border-color;
+//$epo-tab-disabled-label: #b9b9b9;
+//
+//$epo-tab-border-width: 0 0 0 font-size(1);
+//$epo-tab-border-radius: 0;
+//$epo-tab-color: #333;
+//$epo-tab-selected-color: #000;
+//$epo-tab-margin: 0;
+//$epo-tab-padding: font-size(8) font-size(10) font-size(7);
+//
+//$epo-tab-pane-bg: #fff;
+//$epo-tab-pane-width: 0;
+//$epo-tab-pane-color: transparent;
+//$epo-tab-pane-radius: 0;
+//$epo-tab-pane-padding: font-size(15);
+//
+//
+////== Tags
+////
+//
+//$epo-tag-list-font-size: $epo-font-size-base;
+//$epo-tag-list-min-height: 23px;
+//
+//$epo-tag-bg: #206e1f;
+//$epo-tag-border-width: 0;
+//$epo-tag-border-color: transparent;
+//$epo-tag-border-radius: 2px;
+//$epo-tag-color: #fff;
+//$epo-tag-line-height: font-size(20);
+//$epo-tag-margin: 0 2px 2px 0;
+//$epo-tag-padding: 0 3px 0 4px;
+//
+//$epo-tag-icon-color: #fff;
+//$epo-tag-icon-font-size: font-size(18);
+//$epo-tag-icon-line-height: font-size(12);
+//$epo-tag-icon-margin: -1px 0 0 0;
+//
+//
+////== Toggle
+////
+//
+//$epo-toggle-font-size: $epo-font-size-base;
+//
+//
+////== Tooltip
+////
+//
+//$epo-tooltip-bg: #000;
+//$epo-tooltip-color: #fff;
+//$epo-tooltip-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+//$epo-tooltip-border-radius: 4px;
+//$epo-tooltip-padding: 3px 8px;
+//$epo-tooltip-z-index: 1070;
+//$epo-arrow-width: 5px;
+//
+//
+////== Tree
+////
+//
+//$epo-tree-font-size: font-size(18);
+//$epo-tree-margin: 0;
+//$epo-tree-padding: 0;
+//
+//$epo-tree-item-color: $epo-text-color;
+//$epo-tree-item-disabled-color: #888;
+//$epo-tree-item-line-height: font-size(20);
+//$epo-tree-item-border-width: 0;
+//$epo-tree-item-border-color: transparent;
+//$epo-tree-item-hover-border-color: $epo-tree-item-border-color;
+//$epo-tree-item-focus-border-color: $epo-tree-item-border-color;
+//$epo-tree-item-selected-border-color: $epo-tree-item-border-color;
+//$epo-tree-item-outline: 0 !important;
+//
+//$epo-tree-item-bg: transparent;
+//$epo-tree-item-color: $epo-text-color;
+//$epo-tree-item-hover-bg: #eee;
+//$epo-tree-item-hover-color: $epo-text-color;
+//$epo-tree-item-focus-bg: rgba(128, 128, 128, .15);
+//$epo-tree-item-focus-color: $epo-text-color;
+//$epo-tree-item-selected-bg: #dedede;
+//$epo-tree-item-selected-hover-bg: #d8d8d8;
+//$epo-tree-item-selected-color: $epo-text-color;
+//$epo-tree-item-disabled-bg: #eaeaea;
+//$epo-tree-item-margin: 0;
+//$epo-tree-item-padding: 1.3rem 0;
+//
+//
+////== Work manager
+////
+//
+$epo-workmanager-border-color: #d0d0d0;
+$epo-workmanager-border-width: 1px;
+$epo-workmanager-box-shadow: 0 2px 4px rgba(171,174,177,.4);
+$epo-workmanager-height: 40px;
+//
+$epo-workmanager-button-bg: #136233;
+$epo-workmanager-button-hover-bg: #228a4b;
+$epo-workmanager-button-color: #fff;
+//$epo-workmanager-button-font-size: font-size(18);
+//$epo-workmanager-button-font-weight: 700;
+//$epo-workmanager-button-padding: 8px 0 0 12px;
+//
+//$epo-workmanager-button-icon-font-size: font-size(26);
+$epo-workmanager-button-icon-margin: 0 20px 0 0;
+//
+//$epo-workmanager-link-item-bg: #f8f9fa;
+//$epo-workmanager-link-item-hover-bg: #a4cada;
+//$epo-workmanager-link-item-border-width: 1px 0 0 0;
+//$epo-workmanager-link-item-border-color: #e9ebed;
+//$epo-workmanager-link-item-color: $epo-text-color;
+//$epo-workmanager-link-item-font-size: font-size(16);
+//$epo-workmanager-link-item-height: 40px;
+//$epo-workmanager-link-item-padding: 0 5px 0 10px;
+//
+//$epo-workmanager-module-item-bg: #fff;
+//$epo-workmanager-module-item-hover-bg: #a4cada;
+//$epo-workmanager-module-item-border-width: 0;
+//$epo-workmanager-module-item-border-color: transparent;
+//$epo-workmanager-module-item-color: $epo-text-color;
+//$epo-workmanager-module-item-font-size: font-size(20);
+//$epo-workmanager-module-item-height: 64px;
+//$epo-workmanager-module-item-padding: 0;
+//
+$epo-workmanager-box-color: #fff;
+$epo-workmanager-box-width: 50px;
+$epo-workmanager-box-height: 50px;
+//$epo-workmanager-box-line-height: font-size(50);
+$epo-workmanager-box-margin: 0 10px;
+//
+//$epo-workmanager-input-field-width: calc(100% - 30px);
+//$epo-workmanager-input-button-color: #373e42;
+//$epo-workmanager-input-button-margin: 0 0 0 12px;
+//$epo-workmanager-input-button-padding: 0;

@@ -1,0 +1,46 @@
+$epo-workmanager-border-width: 1px !default;
+$epo-workmanager-box-shadow: 0 2px 4px rgba(171,174,177,.4) !default;
+$epo-workmanager-height: 40px !default;
+$epo-workmanager-button-icon-margin: 0 20px 0 0 !default;
+$epo-workmanager-button-hover-bg: #228a4b !default;
+
+.epo-workmanager {
+	position: relative;
+
+	.workmanager {
+		&-button {
+			position: relative;
+			height: $epo-workmanager-height;
+			cursor: pointer;
+			padding-left: 5px;
+			text-align: left;
+			line-height: $epo-workmanager-height;
+			&:focus {
+				z-index: 999;
+			}
+
+			&-icon {
+				margin: $epo-workmanager-button-icon-margin;
+				vertical-align: middle;
+			}
+		}
+
+		&-items {
+			position: absolute;
+			top: $epo-workmanager-height;
+			z-index: 998;
+			margin: 0;
+			padding: 0;
+			border-width: 1px;
+      border-style: solid;
+			border-width: $epo-workmanager-border-width;
+			box-shadow: $epo-workmanager-box-shadow;
+			width: 100%;
+
+			&-item {
+				cursor: pointer;
+				list-style-type: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+<section id="section-main-menu" class="epo-workmanager" (click)="$event.stopPropagation();" [attr.role]="'menubar'" >
+    <div class="workmanager-button"
+        [ngStyle]="{ backgroundColor: selectedItem?.color }"
+        [attr.ariaExpanded]="isOpen"
+        [attr.aria-haspopup]="true"
+        [attr.accesskey]="key"
+        [attr.tabindex]="0"
+        [attr.role]="'none'"
+        (click)="toggle();">
+        <i class="epoIcon epoIcon-Modules" [attr.aria-hidden]="true"></i>{{selectedItem?.label}}
+    </div>
+    <ul *ngIf="isOpen" class="workmanager-items" [attr.role]="menu">
+        <li *ngFor="let item of items"
+            class="workmanager-items-item workmanager-items-item-{{item.type}}"
+            [ngClass]="{'selected': item.selected, 'focused': item.focused }"
+            [attr.role]="none"
+            (click)="clickItem(item);">
+            <epo-main-menu-item [item]="item" (searchResult)="changeSearchResults($event);" [hasFocus]="isFocused(item)"></epo-main-menu-item>
+        </li>
+    </ul>
+</section>

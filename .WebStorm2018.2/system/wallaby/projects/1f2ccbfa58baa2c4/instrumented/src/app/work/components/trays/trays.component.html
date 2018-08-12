@@ -1,0 +1,46 @@
+<epo-main-menu [items]="menuItems$ |async " [selectedItem]="selectedMenuItem$ | async" (selectedItemChange)="menuItemSelected($event)"></epo-main-menu>
+
+<!-- <epo-tabs [fullWidth]="true">
+    <epo-tab *ngFor="let tab of tabs$ | async" [label]="tab.label">
+        <div *ngFor="let panel of tab.panels">
+            <h3>{{panel.name}}</h3>
+            <epo-tree [collection]="tab.trays" [parent]="panel.id">
+                <span class="tray-item-tasks">
+                    <ng-template let-tray>
+                        <epo-badge *ngIf="tray.urgent > 0" badges [badgeStyle]="'danger'" [ariaLabel]="'number of urgent tasks in tray'">{{ tray.urgent }}</epo-badge>
+                        <span class="tray-item-tasks__usertasks" aria-label="number of total tasks in tray">{{ tray.total }}</span>
+                    </ng-template>
+                </span>
+            </epo-tree>
+        </div>
+    </epo-tab>
+</epo-tabs> -->
+
+
+<!--
+
+
+<epo-tabs *ngIf="showTabs" [fullWidth]="true">
+    <epo-tab *ngFor="let tab of tabs" [label]="tab.label">
+            <epo-tree *ngFor="let module of modules" [collection]="module.trays" (nodeClick)="trayClicked($event);" [selected]="selectedTray">
+                <span class="tray-item-tasks">
+                    <ng-template let-tray>
+                        <epo-badge *ngIf="tray.urgent > 0" badges [badgeStyle]="'danger'" [ariaLabel]="'number of urgent tasks in tray'">{{ tray.urgent }}</epo-badge>
+                        <span class="tray-item-tasks__usertasks" aria-label="number of total tasks in tray">{{ tray.total }}</span>
+                    </ng-template>
+                </span>
+            </epo-tree>
+    </epo-tab>
+</epo-tabs>
+
+<ng-container *ngIf="!showTabs">
+        <epo-tree *ngFor="let module of modules" [collection]="module.trays" (nodeClick)="trayClicked($event);" [selected]="selectedTray">
+            <span class="tray-item-tasks">
+                <ng-template let-tray>
+                    <epo-badge *ngIf="tray.urgent > 0" badges [badgeStyle]="'danger'" [ariaLabel]="'number of urgent tasks in tray'">{{ tray.urgent }}</epo-badge>
+                    <span class="tray-item-tasks__usertasks" aria-label="number of total tasks in tray">{{ tray.total }}</span>
+                </ng-template>
+            </span>
+        </epo-tree>
+</ng-container>
+-->

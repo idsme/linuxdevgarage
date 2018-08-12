@@ -1,0 +1,5 @@
+#Add dev path scripts to .bashrc file
+if [ -f ~/.bash_dev_paths ]; then
+    . ~/.bash_dev_paths
+fi
+

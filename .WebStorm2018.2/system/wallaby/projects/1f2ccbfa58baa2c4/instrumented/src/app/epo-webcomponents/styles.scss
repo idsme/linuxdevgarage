@@ -1,0 +1,61 @@
+@import "mainmenu/main-menu-item.component.themes";
+@import "mainmenu/main-menu.component.themes";
+// These General values can be overridden by the app.
+// Convert from APP settings to EPO-Components colors.
+$epo-workmanager-border-color: $border-gray;
+$epo-workmanager-button-bg: $color-brand-primairy;
+$epo-workmanager-button-hover-bg: $color-brand-primairy-hover;
+$epo-workmanager-button-color: $color-brand-white;
+$epo-workmanager-box-color: $color-brand-white;
+
+
+// TODO IDMSE Test
+[class^="-button"],
+[class*=" button-"]:before {
+  font-style: $font-size-button-text;
+  font-weight: normal;
+}
+
+
+@font-face {
+	font-family: 'EPO-Icon-Font';
+	src: url('./scss/font/EPO-Icon-Font.eot?r8txb2');
+	src:
+	url('./scss/font/EPO-Icon-Font.eot?r8txb2#iefix') format('embedded-opentype'),
+	url('./scss/font/EPO-Icon-Font.ttf?r8txb2') format('truety  pe'),
+	url('./scss/font/EPO-Icon-Font.woff?r8txb2') format('woff'),
+	url('./scss/font/EPO-Icon-Font.svg?r8txb2#EPO-Icon-Font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.epoIcon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'EPO-Icon-Font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.epoIcon-Modules {
+  &:before {
+    content: '\f00a';
+  }
+}

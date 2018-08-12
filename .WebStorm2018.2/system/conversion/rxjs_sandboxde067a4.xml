@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversion>
+  <applied-converters>
+    <converter id="DockerRunConfigurationConverterProvider" />
+    <converter id="cucumber.js-run-configuration" />
+    <converter id="js-debug-configuration-converter" />
+    <converter id="js-predefined-libraries-merged" />
+  </applied-converters>
+  <project-files>
+    <file path="/home/idsme/p/github/rxjs_sandbox/.idea/misc.xml" timestamp="1530816351000" />
+    <file path="/home/idsme/p/github/rxjs_sandbox/.idea/modules.xml" timestamp="1530816351000" />
+    <file path="/home/idsme/p/github/rxjs_sandbox/.idea/rxjs_sandbox.iml" timestamp="1530816351000" />
+    <file path="/home/idsme/p/github/rxjs_sandbox/.idea/vcs.xml" timestamp="1530816362000" />
+    <file path="/home/idsme/p/github/rxjs_sandbox/.idea/workspace.xml" timestamp="1532898343000" />
+  </project-files>
+</conversion>
+

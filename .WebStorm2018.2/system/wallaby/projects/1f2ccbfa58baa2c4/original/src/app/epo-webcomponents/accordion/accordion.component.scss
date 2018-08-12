@@ -1,0 +1,87 @@
+epo-accordion {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    min-height: 100%;
+    background-color: #fff;
+
+    epo-panel {
+        display: flex;
+        flex-direction: column;
+        flex: 0;
+    }
+}
+
+.epo-accordion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #d0d0d0;
+    background-color: #fff;
+
+    .epo-accordion-panel {
+        list-style: none;
+
+        &_heading {
+            display: block;
+            background-color: #f1f6fa;
+            border: 1px solid #d0d0d0;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            color: #333;
+            width: inherit;
+            display: block;
+            margin: 0;
+            padding: 13px 9px 12px 13px;
+            text-decoration: none;
+        }
+
+        &_content {
+            display: flex;
+            background-color: #fff;
+            height: 0px;
+            transition: height 1s ease-out;
+            -webkit-transform: scaleY(0);
+            -webkit-transform: scaleY(0);
+            -o-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            transform: scaleY(0);
+            -o-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+
+         &_content.active {
+            display: block;
+            height: auto;
+            -webkit-transform: scaleY(1);
+            -o-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: top;
+            -o-transform-origin: top;
+            -ms-transform-origin: top;
+            transform-origin: top;
+            -webkit-transition: -webkit-transform 0.4s ease-out;
+            -o-transition: -o-transform 0.4s ease;
+            -ms-transition: -ms-transform 0.4s ease;
+            transition: transform 0.4s ease;
+        }
+
+        &_prio { 
+            float: right; 
+            padding: 0 10px;
+        }
+
+        a:hover, a:focus {
+            background-color: #eeeeee;
+            border-color: #d0d0d0;
+            color: #333;
+            cursor: pointer;
+        }
+    }
+}

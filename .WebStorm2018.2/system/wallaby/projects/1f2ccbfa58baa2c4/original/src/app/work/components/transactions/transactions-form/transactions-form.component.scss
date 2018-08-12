@@ -1,0 +1,17 @@
+.transaction-form {
+
+    &__description {
+        margin: 5px 0;
+    }
+    &__question {
+        margin: 5px 0;
+    }
+
+    &__buttons {
+        display: block;
+        margin: 10px 0 10px 0;
+        padding-top: 15px;
+        text-align: right;
+    }
+
+}

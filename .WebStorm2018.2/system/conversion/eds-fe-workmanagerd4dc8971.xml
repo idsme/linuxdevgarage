@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversion>
+  <applied-converters>
+    <converter id="DockerRunConfigurationConverterProvider" />
+    <converter id="cucumber.js-run-configuration" />
+    <converter id="js-debug-configuration-converter" />
+    <converter id="js-predefined-libraries-merged" />
+  </applied-converters>
+  <project-files>
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/codeStyles/Project.xml" timestamp="1533289349000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/codeStyles/codeStyleConfig.xml" timestamp="1533289349000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/eds-fe-workmanager.iml" timestamp="1533289278000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/inspectionProfiles/Project_Default.xml" timestamp="1533289349000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/misc.xml" timestamp="1533289278000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/modules.xml" timestamp="1533289278000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/shelf/Wallaby_App_modifications_to_make_it_work.xml" timestamp="1533814092000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/shelf/Wallaby_Implementation.xml" timestamp="1533814092000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/shelf/Wallaby_Implementation1.xml" timestamp="1533814092000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/shelf/component_to_component_old.xml" timestamp="1533814092000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/shelf/refactorstore.xml" timestamp="1533814092000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/vcs.xml" timestamp="1533289349000" />
+    <file path="/home/idsme/p/epo/eds-fe-workmanager/.idea/workspace.xml" timestamp="1533814092000" />
+  </project-files>
+</conversion>
+

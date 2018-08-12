@@ -1,0 +1,70 @@
+@import "global_variables";
+@import "global_scss/theme_colors";
+@import "global_scss/fonts";
+@import "global_scss/global";
+@import "global_scss/site";
+@import "app/epo-webcomponents/styles";
+
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #ccc;
+	box-sizing: border-box;
+	color: #333;
+	line-height: 1.42857;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin: .33rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.8rem;
+}
+
+h5 {
+	font-size: 1.6rem;
+}
+
+h6 {
+	font-size: 1.4rem;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+input {
+	height: 1.6rem;
+	width: 1.6rem;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}

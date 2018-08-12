@@ -1,0 +1,33 @@
+.review-dialog {
+
+    &__header{
+
+        &__title{
+            font-size: 2.4rem;
+            color: #72706e;
+            margin: 1rem 0 1.1rem 0;
+        }
+        &__subtitle{
+            font-size: 1.8rem;
+            margin: 0 0 2rem 0;
+            color: #72706e;
+        }
+    }
+    &__comments{
+
+    }
+    &__buttons{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+
+        > * {
+            margin-left: 1rem;
+        }
+
+        :first-child {
+            margin-left: 0;
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+source /home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh
+cd ~
+export SCRIPTS_DIR="$HOME/dev/scripts"
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$SCRIPTS_DIR:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+. $(brew --prefix nvm)/nvm.sh
+
+nvm use v10.8.0
+npm list -g --depth=0 
+nvm ls-remote | tail -4 
+node --version
+npm --version
+nvm list

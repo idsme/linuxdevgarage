@@ -1,0 +1,4 @@
+// TODO REMOVE THIS>
+@function font-size($input) {
+	@return ($input / $epo-calc-font-size) * 1rem;
+}

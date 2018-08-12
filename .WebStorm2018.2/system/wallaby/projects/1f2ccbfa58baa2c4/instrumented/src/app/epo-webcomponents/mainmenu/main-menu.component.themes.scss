@@ -1,0 +1,25 @@
+$epo-workmanager-button-bg: #136233 !default;
+$epo-workmanager-border-color: #d0d0d0 !default;
+$epo-workmanager-button-color: #fff !default;
+$epo-workmanager-button-hover-bg: #228a4b !default;
+
+.epo-workmanager {
+
+	.workmanager {
+		&-button {
+			background: $epo-workmanager-button-bg;
+			color: $epo-workmanager-button-color;
+      &:focus {
+				color: $epo-workmanager-button-color;
+				background-color: $epo-workmanager-button-hover-bg;
+			}
+
+			&-icon {
+				color: #fff;
+			}
+		}
+    &-items {
+      border-color: $epo-workmanager-border-color;
+    }
+	}
+}

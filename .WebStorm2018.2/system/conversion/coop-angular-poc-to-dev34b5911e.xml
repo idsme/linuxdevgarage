@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversion>
+  <applied-converters>
+    <converter id="DockerRunConfigurationConverterProvider" />
+    <converter id="cucumber.js-run-configuration" />
+    <converter id="js-debug-configuration-converter" />
+    <converter id="js-predefined-libraries-merged" />
+  </applied-converters>
+  <project-files>
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/codeStyles/Project.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/codeStyles/codeStyleConfig.xml" timestamp="1527707234000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/coop-recepten.iml" timestamp="1525884309000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/dictionaries/idsac.xml" timestamp="1528488244000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/inspectionProfiles/Project_Default.xml" timestamp="1525884806000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/misc.xml" timestamp="1525884309000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/modules.xml" timestamp="1525884309000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/saveactions_settings.xml" timestamp="1528490732000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices1.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices2.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices3.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices4.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices5.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/COOP-3223_AddingRecipeDetailsPageServices6.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/DOCS_Added_Guidelines.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/Fixed__e2e_tests.xml" timestamp="1533561374000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/Refactured_Routing1.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/RouterSpecs.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/SentryRavenMod.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TECHDEPT_Add_NGRX_store1.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TECHDEPT_Shared_Lib_from_other_projects_as_a_guide1.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TECHDEPT_Shared_Lib_from_other_projects_as_a_guide2.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TECHDEPT_Shared_Lib_from_other_projects_as_a_guide3.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TODO_Inventory.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/TODO_recepten.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/Wallaby.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/Workinig_with_these_settings_WALLABY.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/shelf/refactored_to_enterprise_before_creating_tests.xml" timestamp="1533561375000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/vagrant.xml" timestamp="1528488411000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/vcs.xml" timestamp="1525884806000" />
+    <file path="/media/idsme/DEVUSB3FAT3/p/coop/coop-angular-poc-to-dev/.idea/workspace.xml" timestamp="1533672146000" />
+  </project-files>
+</conversion>
+

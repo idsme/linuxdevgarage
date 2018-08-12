@@ -1,0 +1,15 @@
+:host {
+    position: relative;
+    width: 100%;
+    border: none!important;
+
+    &-dialog {
+
+        .contentbox-content {
+            margin-top: 0;
+            border: 10px solid #f4f4f4;
+            border-top: none;
+        }
+
+    }
+}

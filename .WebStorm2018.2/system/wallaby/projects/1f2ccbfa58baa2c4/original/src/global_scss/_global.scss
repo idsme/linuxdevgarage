@@ -1,0 +1,49 @@
+// Defines attaches the defines fonts to the
+// Globally used tags.
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-regular;
+  background-color: $color-brand-light-creamy-gray;
+}
+
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: $font-family-headings;
+  font-weight: $font-family-headings-weight;
+  color: $text-color-headings;
+}
+
+
+h1 {
+  font-size: 19px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p{
+  line-height: 28px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.global-text-shadow {
+  text-shadow: black 0.1em 0.1em 0.6em
+}
+
+

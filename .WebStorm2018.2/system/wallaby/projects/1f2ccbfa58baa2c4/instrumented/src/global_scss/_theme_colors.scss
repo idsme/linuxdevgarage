@@ -1,0 +1,44 @@
+// Import all components themes here.
+// LIKE THIS.
+//@import 'app/shared/layout/header.component-theme';
+//@import 'app/shared/layout/footer.component-theme';
+//@import 'app/shared/layout/content.component-theme';
+//@import 'app/shared/layout/styleguide/styleguide.component-theme';
+//@import 'app/app.component-theme';
+
+//@include header-component-theme($custom-theme);
+//@include sidenav-component-theme($custom-theme);
+//@include page-content-component-theme($custom-theme);
+//@include footer-component-theme($custom-theme);
+//@include styleguide-component-theme($custom-theme);
+
+// Define primairy / brand / theme colors here.
+$color-brand-black:             #000000;       // Black
+$color-brand-white:             #ffffff;       // White
+$color-brand-primairy :         #136233;
+$color-brand-primairy-hover:    #228a4b;
+$color-brand-secondairy :       #e3a622;
+$color-brand-accent :           #4741e3;
+$color-brand-light-creamy-gray: #f3efeb;       // LightCreamyGray
+
+//## Gray and brand other colors
+$gray-base:                     #A9A5A2 !default;
+$gray:                          #D8D8D8 !default;
+$gray-light:                    #d0d0d0 !default;
+$gray-lighter:                  #C5C2BF !default;
+
+
+$border-gray:                   $gray-lighter;
+
+$text-color-primary:            $color-brand-black;
+$text-color-alternative:        $color-brand-light-creamy-gray;
+
+$brand-success:                 #9cbe14 !default;
+$brand-info:                    #3ab3f8 !default;
+$brand-warning:                 #f8c31c !default;
+$brand-danger:                  #ff2d39 !default;
+
+
+
+
+

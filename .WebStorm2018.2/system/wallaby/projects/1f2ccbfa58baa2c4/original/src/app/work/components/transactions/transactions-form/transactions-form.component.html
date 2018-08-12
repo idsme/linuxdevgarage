@@ -1,0 +1,70 @@
+<!--
+<ng-container [ngSwitch]="configData.form.type">
+
+    <ng-container *ngSwitchCase="'CASE'">
+        &lt;!&ndash;CASE FORM&ndash;&gt;
+        <div class="transaction-form">
+            <p class="transaction-form__description">{{caseDescription}}</p>
+            <a [href]="caseTool" target="_blank">{{caseLink}}</a>
+            <span class="transaction-form__question">{{caseQuestion}}</span>
+            <epo-radio-group [name]="configData.form.optionName" [(ngModel)]="configData.form.selectedOption">
+                <epo-radio-button *ngFor="let option of configData.form.options" [value]="option">{{option}}</epo-radio-button>
+            </epo-radio-group>
+            <div class="transaction-form__buttons">
+                <epo-button-dropdown [label]="configData.form.primaryAction" [ariaLabel]="configData.form.primaryAction" [optionsList]="configData.form.otherActions"
+                    (buttonClick)="toggleDialog(true);"></epo-button-dropdown>
+            </div>
+        </div>
+
+        <epo-dialog [(visible)]="showDialog" [width]="946" [height]="452">
+            <eds-review-action-dialog (closeDialog)="toggleDialog($event)"></eds-review-action-dialog>
+        </epo-dialog>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'SECA'">
+        &lt;!&ndash;SECA FORM&ndash;&gt;
+        <div class="transaction-form">
+            <span class="transaction-form__question">{{secaQuestion}}</span>
+            <epo-radio-group [name]="configData.form.optionName" [(ngModel)]="configData.form.selectedOption">
+                <epo-radio-button *ngFor="let option of configData.form.options" [value]="option">{{option}}</epo-radio-button>
+            </epo-radio-group>
+            <div class="transaction-form__buttons">
+                <epo-button [label]="configData.form.primaryAction" [disabled]="radioBtnState()"></epo-button>
+            </div>
+        </div>
+
+        <epo-dialog [(visible)]="showDialog" [width]="946" [height]="452">
+            <eds-review-action-dialog (closeDialog)="toggleDialog($event)"></eds-review-action-dialog>
+        </epo-dialog>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'CII'">
+        &lt;!&ndash;CII FORM&ndash;&gt;
+        <div class="transaction-form">
+            <span class="transaction-form__question">{{secaQuestion}}</span>
+            <epo-radio-group [name]="configData.form.optionName" [(ngModel)]="configData.form.selectedOption">
+                <epo-radio-button *ngFor="let option of configData.form.options" [value]="option">{{option}}</epo-radio-button>
+            </epo-radio-group>
+            <div class="transaction-form__buttons">
+                <epo-button [label]="configData.form.primaryAction" [disabled]="radioBtnState()"></epo-button>
+            </div>
+        </div>
+
+        <epo-dialog [(visible)]="showDialog" [width]="946" [height]="452">
+            <eds-review-action-dialog (closeDialog)="toggleDialog($event)"></eds-review-action-dialog>
+        </epo-dialog>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+        &lt;!&ndash;BASIC FORM&ndash;&gt;
+        <div class="transaction-form__buttons">
+            <epo-button-dropdown [label]="configData.form.primaryAction" [ariaLabel]="configData.form.primaryAction" [optionsList]="configData.form.otherActions"
+                (buttonClick)="toggleDialog(true);"></epo-button-dropdown>
+        </div>
+
+        <epo-dialog [(visible)]="showDialog" [width]="946" [height]="452">
+            <eds-review-action-dialog (closeDialog)="toggleDialog($event)"></eds-review-action-dialog>
+        </epo-dialog>
+    </ng-container>
+
+</ng-container>-->
