@@ -1,13 +1,17 @@
 source /home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh
 cd ~
+
+export M2_HOME="$HOME/dev_apps/maven"
+export JAVA_HOME="$HOME/dev_apps/javajdk"
 export SCRIPTS_DIR="$HOME/dev/scripts"
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$SCRIPTS_DIR:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 . $(brew --prefix nvm)/nvm.sh
 
-nvm use v10.8.0
+#nvm use v10.8.0
+nvm use v8.12.0
 npm list -g --depth=0 
 nvm ls-remote | tail -4 
 node --version
